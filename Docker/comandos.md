@@ -22,27 +22,27 @@
 
 > OBS: docker run == docker create + docker start
 
-# Listagens 
+# Listagem de containers
 > $ docker ps
 - Lista todos os containers rodando atualmente
 - A lista traz as informações de cada container
 > $ docker ps -a
 - Lista todos os containers criados na máquina, inclusive os que estão com status "exited" (antes ocultos)
->
 
-# Parar um container
+# Start e stop
 > $ docker stop nome-do-container (ou id do container)
-
-# Iniciar um container já existente
+- Para um container que está rodando
 > $ docker start nome-do-container (ou id do container)
-
-# Baixar uma imagem sem criar container
-> $ docker pull nome-da-imagem
+- Inicia um container existente na máquina que está parado
 
 # Remover um container da máquina
 > $ docker rm(ou remove) nome-do-container (ou id do container)
 - Somente containers parados podem ser removidos
 - Uma vez removidos não podem ser recuperados
+
+# Informações de container
+> $ docker inspect nome-do-container (ou id do container)
+- Mostra informações gerais do container solicitado
 
 # Entrar no container em modo Bash
 > $ docker exec -it nome-do-container (ou id do container) bash
@@ -53,3 +53,29 @@
 > $ docker logs -f nome-do-container (ou id do container)
 - O terminal continua mostrando os logs do container em tempo real até que receba um comando de parada ou seja fechado
 
+# Imagens
+> $ docker images
+- Lista todas as imagens presentes na máquina
+> $ docker pull nome-da-imagem
+- Baixa uma imagem sem criar um container
+> $ docker rmi id-da-imagem(ou nome no repositório)
+- Remove a imagem da máquina
+> $ docker push nome-da-imagem
+- Enviar uma imagem da máquina a um repositório (necessário estar logado => $ docker login)
+
+# Cópia de arquivo ou pasta
+> docker cp path-atual:path-futuro
+- Funciona tanto da máquina host para o container quanto o inverso
+
+# Rede
+> $ docker network create nome-da-rede
+- Para adicionar containers a uma nova rede pare que eles possam se enxergar entre si podemos utilizar a rede padrão ou criar uma nova
+- No comando docker a rede pode ser passada como $ docker run -network nome-da-rede nome-da-imagem
+> $ docker network prune
+- Remove todas as networks da máquina host que não estão sendo utlizadas
+> $ docker network rm nome-da-rede
+- Romove uma rede específica
+
+# Volume
+> $ docker volume ls
+- Lista todos os volumes
