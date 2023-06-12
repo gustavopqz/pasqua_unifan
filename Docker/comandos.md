@@ -1,5 +1,5 @@
 # Criação de container
-> $ docker run nome-da-imagem
+` $ docker run nome-da-imagem `
 - Caso não haja a imagem na máquina o docker vai ao dockerhub e realiza download da imagem
 - Já com a imagem na máquina é criado um container com aquela imagem
 - No caso caso não sejam passados os parâmetros como porta, nome do container, volumes, variáveis de ambiente, o container é criado seguindo default
