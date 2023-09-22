@@ -1,0 +1,114 @@
+/* Importando fonte do google */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+/* Global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Header */
+header{
+    position: fixed;
+    width: 100%;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vw;
+    border-bottom: 1px solid #000;
+    box-shadow: 0px 0px 4px 0.5px #000;
+    width: 100%;
+    height: 10vh;
+    z-index: 9999;
+}
+
+.logo{
+    max-width: 5vw;
+}
+
+#space{
+    width: 5vw;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    width: 90vw;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    width: 100%;
+}
+
+nav ul li{
+    min-width: 10vw;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 2px solid #FFF;
+    cursor: pointer;
+}
+
+nav ul li:hover{
+    border-bottom: 2px solid #397269;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #397269;
+}
+
+
+/* Seção de boas vindas */
+#boas-vindas{
+    padding-top: 10vh;
+    min-height: 60vh;
+    display: flex;
+    background: url('paws.png');
+}
+
+#boas-vindas .dizeres{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    justify-content: center;
+    align-items: center;
+    color: #4bc45f;
+}
+
+.dizeres h1{
+    font-size: 5rem;
+}
+
+.dizeres h2{
+    font-size: 2rem;
+}
+
+/* História */
+#historia{
+    min-height: 60vh;
+    display: flex;
+    margin: 2em 0;
+}
+
+#historia .dizeres{
+    width: 60%;
+    background-color: #397269;
+}
+
+#historia .dizeres h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#historia .dizeres p{
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
