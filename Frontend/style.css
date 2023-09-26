@@ -9,15 +9,19 @@
 }
 
 /* Global */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Fredoka', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Header */
-header{
+header {
     position: fixed;
     width: 100%;
     background-color: #FFF;
@@ -31,21 +35,21 @@ header{
     z-index: 9999;
 }
 
-.logo{
+.logo {
     max-width: 5vw;
 }
 
-#space{
+#space {
     width: 5vw;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     width: 90vw;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -53,7 +57,7 @@ nav ul{
     width: 100%;
 }
 
-nav ul li{
+nav ul li {
     min-width: 10vw;
     text-align: center;
     padding: 1rem 0;
@@ -61,51 +65,61 @@ nav ul li{
     cursor: pointer;
 }
 
-nav ul li:hover{
+nav ul li:hover {
     border-bottom: 2px solid #397269;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: #397269;
 }
 
 
 /* Seção de boas vindas */
-#boas-vindas{
+#boas-vindas {
     padding-top: 10vh;
     min-height: 60vh;
     display: flex;
     background: url('paws.png');
+    background-color: #D0C7BF;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#boas-vindas .dizeres{
-    width: 100%;
+#boas-vindas img {
+    height: 60vh;
+}
+
+#boas-vindas .dizeres {
+    height: 70%;
     display: flex;
     flex-direction: column;
-    color: #FFF;
     justify-content: center;
     align-items: center;
-    color: #4bc45f;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #397269;
 }
 
-.dizeres h1{
+.dizeres h1 {
     font-size: 5rem;
     text-align: center;
     max-width: 40vw;
 }
 
-.dizeres h2{
+.dizeres h2 {
     font-size: 2rem;
 }
 
 /* História */
-#historia{
+#historia {
+    padding: 10vh 0;
     display: flex;
     justify-content: center;
 }
 
-#historia .dizeres{
+#historia .dizeres {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,28 +131,124 @@ nav ul li a{
     border-radius: 4px;
 }
 
-#historia .dizeres p{
+#historia .dizeres h2 {
+    font-size: 2.4rem;
+    padding-bottom: 1rem;
+}
+
+#historia .dizeres p {
     text-align: center;
     font-size: 1.2rem;
 }
 
-#logo_div{
+#logo_div {
     max-width: 50vw;
 }
 
-#logo_div img{
+#logo_div img {
     width: 20vw;
 }
 
-/* Localização */
-#map{
-    max-width: 100%;
-    
-}
-#localizacao{
-    background-color: #ffffff;
+/* Como nos ajudar */
+#ajudar {
+    min-height: 80vh;
+    background: url('dog.jpg');
+    background-size: cover;
+    display: flex;
+    padding: 10vh 0;
 }
 
+#ajudar .espaco {
+    width: 50vw;
+}
+
+#conteudo {
+    width: 50vw;
+}
+
+#ajudar h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 75px;
+}
+
+#conteudo ul {
+    list-style: none;
+    height: calc(100% - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ajuda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.7rem;
+    cursor: default;
+}
+
+.ajuda img {
+    max-width: 3.5rem;
+    transition: ease .3s;
+}
+
+.ajuda img:hover {
+    transform: scale(1.1);
+}
+
+/* Contatos */
+#contatos {
+    min-height: 60vh;
+    background: url('paws.png');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contatos ul {
+    list-style: none;
+}
+
+#contatos .conteudo {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+#contatos .conteudo h2 {
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+#contatos .conteudo ul li {
+    font-size: 1.7rem;
+    color: #397269;
+}
+
+/* Localização */
+#map {
+    max-width: 100%;
+}
+
+#localizacao {
+    background-color: #ffffff;
+    padding-top: 10vh;
+}
+
+#localizacao .dizeres {
+    padding-bottom: 1.5rem;
+}
+
+#localizacao .dizeres h2 {
+    font-size: 2.4rem;
+}
+
+#localizacao .dizeres p {
+    font-size: 1.7rem
+}
 
 #titulo_loc {
     font-size: 24px;
@@ -151,28 +261,57 @@ nav ul li a{
 #desc_loc {
     font-size: 20px;
     color: #333;
-    text-align: center; 
+    text-align: center;
     background-color: #ffffff;
 }
 
 /* Footer */
-footer{
-    width: 100%;
-    color: var(--color-neutral-40);
-}
-.footer-link{
-    text-decoration: none;
-}
-#footer_content{
-    background-color: var(--color-neutral-10);
-    display: flex;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 3rem, 3.5rem;
+footer {
+    background-color: #d0c7bf;
 }
 
-#footer_content h1{
-    margin-bottom: 0.75rem;
+#logo_footer {
+    width: 10rem;
 }
+
+#conteudo_footer {
+    display: flex;
+    padding: 2rem 0;
+}
+
+.footer-list {
+    width: 33.4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+#nav-footer h2 {
+    font-size: 2rem;
+}
+
+#nav-footer ul {
+    list-style: none;
+}
+
+#nav-footer ul li {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#nav-footer a {
+    color: #000;
+    text-decoration: none;
+}
+
+.hover_effect:hover a{
+    opacity: 0.8;
+    
+}
+.footer-list .footer-link:hover{
+    color: #25d366;
+}    
 
 #footer_social_media {
     display: flex;
@@ -180,7 +319,12 @@ footer{
     margin-top: 1.5rem;
 }
 
-#footer_social_media .footer-link{
+#footer_social_media {
+    flex-direction: row;
+    justify-content: center;
+}
+
+#footer_social_media .footer-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,45 +335,28 @@ footer{
     transition: all 0.4s;
 }
 
-#footer_social_media .footer-link i{
+#footer_social_media .footer-link i {
     font-size: 1.25rem;
 }
 
-#footer_social_media .footer-link:hover{
+#footer_social_media .footer-link:hover {
     opacity: 0.8;
-
 }
 
 #instagram {
     background: linear-gradient(#7f37c9, #ff2992, #ff9807);
 }
-#whatsapp{
+
+#whatsapp {
     background-color: #25d366;
 }
 
-.footer-list{
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    list-style: none;
-    width: 33%;
-}
-
-.footer-list .footer-link{
-    color: var(--color-neutral-30);
-    transition: all 0.4s;
-}
-
-.footer-list .footer-link:hover{
-    color: #397269;
-}
-
-#footer_copyright{
+#footer_copyright {
+    border-top: 2px solid #000;
     display: flex;
     justify-content: center;
-    background-color: var(--color-neutral-0);
+    background-color: #d0c7bf;
     font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 100;
 }
-
