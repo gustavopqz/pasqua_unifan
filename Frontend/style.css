@@ -102,14 +102,15 @@ nav ul li a {
     color: #397269;
 }
 
-.dizeres h1 {
-    font-size: 5rem;
+#boas-vindas .dizeres h2 {
+    font-size: 2rem;
     text-align: center;
     max-width: 40vw;
 }
 
-.dizeres h2 {
-    font-size: 2rem;
+.dizeres h1 {
+    font-size: 3rem;
+    text-align: center;
 }
 
 /* História */
@@ -143,6 +144,8 @@ nav ul li a {
 
 #logo_div {
     max-width: 50vw;
+    display: flex;
+    align-items: center;
 }
 
 #logo_div img {
@@ -184,6 +187,7 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 10px;
     font-size: 1.7rem;
     cursor: default;
@@ -228,6 +232,11 @@ nav ul li a {
     color: #397269;
 }
 
+#contatos .conteudo ul li a{
+    font-size: 1.7rem;
+    color: #397269;
+}
+
 /* Localização */
 #map {
     max-width: 100%;
@@ -235,7 +244,12 @@ nav ul li a {
 
 #localizacao {
     background-color: #ffffff;
-    padding-top: 10vh;
+    padding-top: 2rem;
+}
+
+#titulo_loc{
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
 #localizacao .dizeres {
@@ -244,18 +258,11 @@ nav ul li a {
 
 #localizacao .dizeres h2 {
     font-size: 2.4rem;
+    text-align: center;
 }
 
 #localizacao .dizeres p {
     font-size: 1.7rem
-}
-
-#titulo_loc {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-    text-align: center;
-    background-color: #ffffff;
 }
 
 #desc_loc {
@@ -305,10 +312,10 @@ footer {
     text-decoration: none;
 }
 
-.hover_effect:hover a{
-    opacity: 0.8;
-    
+#ul-nav li a:hover{
+    color: #397269;
 }
+
 .footer-list .footer-link:hover{
     color: #25d366;
 }    
@@ -359,4 +366,26 @@ footer {
     font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 100;
+}
+
+@media (max-width:1300px), (max-height: 700px){
+    #boas-vindas .dizeres h2{
+        font-size: 1.5rem;
+    }
+
+    #logo_div img{
+        width: 30vw;
+    }
+
+    #ajudar h2{
+        font-size: 2rem;
+    }
+
+    .ajuda{
+        font-size: 1.2rem;
+    }
+
+    #map iframe{
+        max-height: 60vh;
+    }
 }
